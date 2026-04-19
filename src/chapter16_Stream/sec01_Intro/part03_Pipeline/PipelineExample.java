@@ -17,7 +17,7 @@ public class PipelineExample {
 		);
 		
 		double avg = list.stream()
-				.mapToInt(Student :: getScore)  // 중간처리 : 학생 객체를 점수로 매
+				.mapToInt(Student :: getScore)  // 중간처리 : 학생 객체를 점수로 매핑
 				.average()						// 최종처리 : 평균 구하기
 				.getAsDouble();
 		
