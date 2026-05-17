@@ -20,10 +20,14 @@ public class MatchExample {
 			new Item(6, "phone", Item.COMPLETE)
 		);
 		
-//		List<Item> list2 = Arrays.asList(
-//			new Item(2, "phone", Item.COMPLETE),
-//			new Item(6, "phone", Item.COMPLETE)
-//		);
+//		List<Item> list = Arrays.asList(
+//				new Item(1, "phone", Item.COMPLETE),
+//				new Item(2, "phone", Item.COMPLETE),
+//				new Item(3, "phone", Item.COMPLETE),
+//				new Item(4, "phone", Item.COMPLETE),
+//				new Item(5, "phone", Item.COMPLETE),
+//				new Item(6, "phone", Item.COMPLETE)
+//				);
 		
 		if (check(list)) {
 			System.out.println("모두 complete");
@@ -33,7 +37,7 @@ public class MatchExample {
 	}
 
 	public static boolean check(List<Item> list) {
-		return list.stream().allMatch(a -> a.getStatus() == 3000);
+		return list.stream().allMatch(a -> a.getStatus() == Item.COMPLETE);
 	}
 	
 }
